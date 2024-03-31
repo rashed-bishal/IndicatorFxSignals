@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="{{asset('resources/bootstrap/css/bootstrap.min.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/fonts/font_family_actor.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/fonts/font_family_amiko.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/fonts/font_family_kaushan.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/fonts/font_family_mostserrat_400_700.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/fonts/font_family_roboto.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/fonts/fontawesome-all.min.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/fonts/font-awesome.min.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/fonts/fontawesome5-overrides.min.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/css/styles.min.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/css/aos.min.min.css')}}"/>
+<link rel="stylesheet" href="{{asset('resources/css/animate.min.min.css')}}"/>
