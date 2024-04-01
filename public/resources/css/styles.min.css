@@ -708,6 +708,9 @@ a.animated-button.victoria-one:after {
   border-radius: 100%;
 }
 
+.btn {
+}
+
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #ff6600;
 }
@@ -742,10 +745,34 @@ a:hover {
 }
 
 .btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 .2rem #ff9800 !important;
+  box-shadow: none;
 }
 
 p {
   text-align: justify;
+}
+
+::selection {
+  background: #ff6600;
+  text-shadow: none;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #ff6600;
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-check-input:focus {
+  border-color: #ff6600;
+  outline: 0;
+  box-shadow: none;
+}
+
+.alert {
+  width: 500px;
+  margin: auto;
 }
 

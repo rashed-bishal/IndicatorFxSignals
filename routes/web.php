@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/home', function () {
     return view('main.home');
 });
 
@@ -25,6 +29,19 @@ Route::get('/plans', function () {
 Route::get('/faq',function (){
    return view('main.faq');
 });
+
+Route::get('/privacy', function(){
+    return view('main.privacy_policy');
+});
+
+Route::get('/terms', function(){
+    return view('main.terms_conditions');
+});
+
+Route::get('/risk', function(){
+    return view('main.risk_warning');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
