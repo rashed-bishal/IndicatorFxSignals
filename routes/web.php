@@ -18,18 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    Auth::logout();
-    return view('main.home');
-});
 
 Route::get('/plans', function () {
     return view('main.plans_pricing');
-});
+})->name('plans');
 
 Route::get('/faq',function (){
    return view('main.faq');
-});
+})->name('faq');
 
 Route::get('/privacy', function(){
     return view('main.privacy_policy');
@@ -54,3 +50,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/guest.php';
