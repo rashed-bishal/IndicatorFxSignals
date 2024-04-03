@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
+    Auth::logout();
     return view('main.home');
 });
 

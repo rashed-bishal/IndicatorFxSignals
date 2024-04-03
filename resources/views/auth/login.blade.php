@@ -9,12 +9,16 @@
 
 </head>
 <body style="margin: 0px;margin-top: 0px;">
-<div class="alert alert-danger" role="alert" id="alert-box" style="text-align: center;"><strong>Success!</strong><span> You have been signed in successfully!</span></div>
-
-<x-auth-session-status class="mb-4" :status="session('status')" />
-<x-input-error :messages="$errors->get('email')" class="mt-2" />
-<x-input-error :messages="$errors->get('password')" class="mt-2" />
-
+@if($errors->any())
+    <div class="alert alert-danger" role="alert" id="alert-box">
+        <ul style="list-style-type: none;margin: 0;padding: 0;border: none;">
+            @foreach($errors->all() as $error)
+                <li><i class="fa fa-warning" style="font-size: 20px;"></i><span class="text-danger margin-left" style="margin: 0px;margin-left: 10px;"></span><span class="text-danger margin-left" style="margin: 0px;margin-left: 10px;">{{$error}}</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="position: relative;float: right;"></button></li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 <div class="d-flex flex-column justify-content-center" id="login-box" style="margin-top: 25px;">
     <div class="login-box-header">
@@ -45,7 +49,7 @@
         </div>
     </form>
     <div id="login-box-footer" style="padding: 10px 20px;padding-bottom: 23px;padding-top: 18px;">
-        <p style="margin-bottom: 0px;">Don't you have an account?<a id="register-link" href="#">Sign Up!</a></p>
+        <p style="margin-bottom: 0px;">Don't you have an account?<a id="register-link" href="{{ route('register') }}">Sign Up!</a></p>
     </div>
 </div>
 @include('includes.assets.js')
